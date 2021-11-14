@@ -8,6 +8,7 @@ import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.webkit.CookieManager
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -65,6 +66,11 @@ class MainActivity : AppCompatActivity() {
 
         // WebView settings
         webView.fitsSystemWindows = true
+
+
+        //Cookies enable
+        CookieManager.allowFileSchemeCookies()
+        CookieManager.getInstance().acceptCookie()
 
         /*
             if SDK version is greater of 19 then activate hardware acceleration

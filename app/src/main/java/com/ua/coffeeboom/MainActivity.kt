@@ -7,6 +7,7 @@ import android.net.Uri
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.annotation.RequiresApi
 import android.view.View
 import android.webkit.CookieManager
 import android.webkit.WebSettings
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private val url = "https://coffee-boom.com.ua/"
     private lateinit var webView: WebView
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
